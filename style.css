@@ -1,0 +1,57 @@
+/* Reset (скидання стилів) */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+/* Сторінка */
+html, body { height: 100%; }
+body {
+  height: 100vh;             /* за вимогою */
+  display: flex;             /* секції підряд у колонку */
+  flex-direction: column;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f7f7f8;
+  color: #1a1a1a;
+}
+
+/* Секції */
+.header, .main, .footer {
+  display: flex;             /* для керування вирівнюванням */
+  padding: 16px;
+}
+
+/* Висоти + вирівнювання */
+.header {
+  height: 30vh; background: #e6f0ff;
+  align-items: center;         /* вертикально по центру */
+  justify-content: flex-start; /* горизонтально зліва */
+}
+.main {
+  height: 40vh; background: #eafaf1;
+  align-items: center;         /* вертикально по центру */
+  justify-content: center;     /* горизонтально по центру */
+}
+.footer {
+  height: 30vh; background: #fff1e6;
+  align-items: center;         /* вертикально по центру */
+  justify-content: flex-end;   /* горизонтально праворуч */
+}
+
+/* Текст */
+.text {
+  max-width: 900px;
+  line-height: 1.5;
+  font-size: 18px;   /* обов’язково: розмір */
+  color: #222;       /* обов’язково: колір */
+  background: rgba(255, 255, 255, 0.7);
+  padding: 12px 16px;
+  border-radius: 8px;
+  backdrop-filter: blur(2px);
+}
+
+@media (max-width: 480px) {
+  .text { font-size: 16px; }
+}
